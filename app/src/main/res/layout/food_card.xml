@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    android:layout_margin="8dp"
+    android:elevation="1dp"
+    android:layout_marginBottom="20dp"
+    app:strokeColor="#D9D9D9"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="14dp"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:scaleType="center"
+            android:id="@+id/productImage"
+            android:src="@drawable/foodtest"
+            android:layout_width="match_parent"
+            android:layout_height="125dp"/>
+        <TextView
+            android:id="@+id/productName"
+            android:layout_marginTop="4dp"
+            android:paddingHorizontal="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shin Katsu"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:textFontWeight="500"
+            android:fontFamily="@font/montserrat_medium"/>
+        <TextView
+            android:id="@+id/productType"
+            android:paddingHorizontal="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Makanan"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:textFontWeight="400"
+            android:fontFamily="@font/montserrat_regular"/>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

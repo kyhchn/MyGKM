@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mygkm"
+    app:startDestination="@id/pesan">
+
+    <fragment
+        android:id="@+id/pesan"
+        android:name="com.example.mygkm.ui.home.fragments.Pesan"
+        android:label="fragment_pesan"
+        tools:layout="@layout/fragment_pesan" >
+        <action
+            android:id="@+id/action_pesan_to_checkoutBottomSheet"
+            app:destination="@id/checkoutBottomSheet" />
+    </fragment>
+    <fragment
+        android:id="@+id/riwayat"
+        android:name="com.example.mygkm.ui.home.fragments.Riwayat"
+        android:label="fragment_riwayat"
+        tools:layout="@layout/fragment_riwayat" >
+        <action
+            android:id="@+id/action_riwayat_to_checkoutBottomSheet"
+            app:destination="@id/checkoutBottomSheet" />
+    </fragment>
+    <fragment
+        android:id="@+id/profile"
+        android:name="com.example.mygkm.ui.home.fragments.Profile"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <dialog
+        android:id="@+id/checkoutBottomSheet"
+        android:name="com.example.mygkm.ui.home.CheckoutBottomSheet"
+        android:label="fragment_checkout_bottom_sheet"
+        tools:layout="@layout/fragment_checkout_bottom_sheet" >
+        <action
+            android:id="@+id/action_checkoutBottomSheet_to_pesan"
+            app:destination="@id/pesan" />
+    </dialog>
+</navigation>

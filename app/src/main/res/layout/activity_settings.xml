@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.home.settings.Settings">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/primary"/>
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="16dp"
+        android:orientation="vertical">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            app:cardCornerRadius="10dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="Aplikasi MyGKM merupakan aplikasi yang bertujuan membantu mahasiswa dalam memesan makanan serta membantu penjual dalam manajemen pesanannya agar lebih efisien. Selain itu aplikasi ini juga membantu mempermudah mahasiswa FILKOM ketika ingin meminjam ruangan di GKM."
+                android:background="@color/primary"
+                android:textColor="@color/white"
+                android:justificationMode="inter_word"
+                android:textSize="12sp"
+                android:textFontWeight="500"
+                android:fontFamily="@font/montserrat_medium"
+                />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:id="@+id/editProfile"
+            android:layout_marginTop="35dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="30dp"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:text="Edit Profil"
+            android:drawableLeft="@drawable/ic_profile"
+            android:background="@drawable/primary_button"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_marginTop="12dp"
+            android:id="@+id/deleteAccount"
+            android:layout_height="wrap_content"
+            android:paddingLeft="30dp"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:text="Hapus Akun"
+            android:drawableLeft="@drawable/ic_delete"
+            android:background="@drawable/primary_button"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_marginTop="12dp"
+            android:id="@+id/logout"
+            android:layout_height="wrap_content"
+            android:paddingLeft="30dp"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:text="Keluar"
+            android:drawableLeft="@drawable/logout"
+            android:background="@drawable/primary_button"/>
+    </LinearLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>
