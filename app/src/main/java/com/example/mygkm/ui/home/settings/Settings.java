@@ -50,12 +50,14 @@ public class Settings extends AppCompatActivity {
         });
         binding.deleteAccount.setOnClickListener(v -> {
             repository.deleteUser(authRepository.getCurrentUser().getUid(),unused -> {
-                authRepository.logout();
-                Intent intent = new Intent(this, MainActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                intent.putExtra("isOld", true);
-                startActivity(intent);
-                finish();
+                authRepository.deleteAccount(task -> {
+                    authRepository.logout();
+                    Intent intent = new Intent(this, MainActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    intent.putExtra("isOld", true);
+                    startActivity(intent);
+                    finish();
+                },e -> {});
             },e -> {});
         });
     }
