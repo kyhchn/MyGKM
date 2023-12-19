@@ -26,6 +26,7 @@ import com.example.mygkm.models.Product;
 import com.example.mygkm.ui.home.HomeSharedViewModel;
 import com.example.mygkm.ui.home.riwayatdetail.RiwayatDetail;
 
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -61,6 +62,10 @@ public class Riwayat extends Fragment {
         LinearLayoutManager layoutManager = new LinearLayoutManager(requireContext());
         binding.riwayatRecycler.setLayoutManager(layoutManager);
         binding.riwayatRecycler.setAdapter(adapter);
+        binding.sort.setOnClickListener(v -> {
+            Collections.reverse(orderList);
+            adapter.notifyDataSetChanged();
+        });
 
         vm.getRiwayatList().observe(getViewLifecycleOwner(), orders -> {
             Log.d("fetch riwayat", "data found");

@@ -49,6 +49,7 @@ public class Register extends AppCompatActivity {
                             User targetUser = new User(firstName, lastName, email, prodi, nim);
                             firestoreRepository.addUser(targetUser, user.getUid(), success -> {
                                 Intent i = new Intent(Register.this, MainActivity.class);
+                                i.putExtra("isOld", true);
                                 startActivity(i);
                                 finish();
                             }, e -> {

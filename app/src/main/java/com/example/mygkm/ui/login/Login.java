@@ -40,6 +40,7 @@ public class Login extends AppCompatActivity {
                         @Override
                         public void onSuccess(FirebaseUser user) {
                             Intent i = new Intent(Login.this, MainActivity.class);
+                            i.putExtra("isOld", true);
                             startActivity(i);
                             finish();
                         }
